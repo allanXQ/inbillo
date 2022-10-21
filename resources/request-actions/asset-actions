@@ -1,0 +1,40 @@
+request listing
+ASSETS
+request listing
+check if asset name is unique
+check if account balance is sufficient to pay listing fee
+deduct listing fee from account balance and add it to listing_fees
+insert asset details into assets table
+insert asset details to owner portfolio
+
+create trade listing
+as buyer
+check if account balance is enough to make the listing.
+deduct amount from accounts
+add the funds to held_asset_funds
+add the request to trade_listing with trade_status pending.
+
+as seller
+check if portfolio balance is enough to make the sale.
+deduct amount from portfolio.
+add amount to held_asset_portfolio
+add the request to trade_listing with trade_status pending.
+
+buy asset
+check if asset is on sale
+check if status is pending
+check if balance is enough to make purchase
+deduct cost from buyer account and add to seller account.
+delete asset from held_asset_portfolio and add to buyer portfolio
+add trade details to trades
+update listing to fulfilled
+
+sell asset
+check if there is a buyer listing on asset_sales with status pending.
+check if portfolio balance is enough to make the sale.
+deduct asset amount from seller portfolio and add it to buyer portfolio.
+delete asset from held_asset funds and add to seller portfolio.
+add trade details to trades
+update listing to fulfilled.
+
+generate balance sheet

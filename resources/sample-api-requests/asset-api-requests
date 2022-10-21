@@ -1,0 +1,84 @@
+/deposit POST
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+  "username":"allan",
+  "amount":1000
+}
+
+/list POST
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+  "username":"allan100",
+  "asset_name":"cardano",
+  "amount":100,
+  "price":10
+}
+
+/createsellerlisting POST
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+    "username":"allan100", 
+    "amount":10, 
+    "asset_name":"bitcoin"
+}
+
+/createbuyerlisting POST
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+    "username":"allan100", 
+    "amount":10, 
+    "asset_name":"ethereum"
+}
+
+
+/buy POST
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+    "username":"allan", 
+    "amount":10, 
+    "asset_name":"bitcoin",
+    "asset_id":"b62f1153-c67a-4b0a-ac9b-58d068116be1",
+    "list_id":"40ae1f97-446e-4bc5-9c63-7de904e096ca"
+}
+
+/sell POST
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+    "username":"allan100", 
+    "amount":10, 
+    "asset_name":"cardano",
+    "fund_id":"e7707c35-2697-4c3a-bcc3-dd063fac2792",
+    "list_id":"25d00439-ad6f-4ca2-86c7-e277caca23bc"
+}
+
+/portfolio GET
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+    "username":"allan"
+}
+
+/buyers GET
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+}
+
+/sellers GET
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+}
+
+/trades GET
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+    "username":"allan"
+}
+
+/balancesheet GET
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+    "username":"allan"
+}
+
+
+
+

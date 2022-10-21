@@ -1,0 +1,75 @@
+register
+Check if username,email,phone are unique.
+Add details to users, create a bank account
+
+db relations: users, accounts
+
+login
+Check if user details exist in db
+Give auth token
+db relations: users
+
+LOANS
+create listing
+    lender
+    check if bank balance is sufficient to make the listing
+    deduct balance from lender bank and add to held_funds
+    add details to loan listing with status pending
+
+    borrower
+    check if collateral value is sufficient to make the listing
+    deduct collateral_value from borrower portfolio add 
+    to held_collateral
+    add details to loan listing with status pending
+
+db relations: loanListings, accounts, held_funds
+              loanListings, portfolios, held_collateral
+
+lend
+check if borrower details exist in listing with status pending
+check if account balance is sufficient
+deduct balance from lender account and add it to borrower account.
+update borrower listing status to fulfilled
+insert loan details to loans table with status unpaid
+insert detaild to monitor
+
+db relations: loanListings, accounts, loans,monitor
+
+borrow
+check if lender details exist in listing with status pending
+check if collateral value is sufficient
+deduct collateral value from borrower portfolio and add it to held_collateral.
+deduct funds from held funds and add it to borrowers balance.
+change lender listing status from pending to fulfilled.
+insert details to loans db with status unpaid.
+insert detaild to monitor
+
+db relations: loanListings, portfolios,held_funds, loans,monitor
+
+pay loan
+check if loan is expired..
+check if borrower balance is sufficient to pay
+deduct payment from borrower account..
+add it to lender account..
+change loan status to paid..
+release collateral from held_collateral to borrower portfolio...
+
+loans, accounts,held_colateral
+
+monitor loans
+at start of day check loans table where payment date === date.now and status ===pending
+change loan status to expired.
+deduct collateral value from held_collateral and add it to lender portfolio.
+
+loans, held_collateral, 
+
+remove listing
+check if listing status is pending
+remove borrower/lender details from listing
+if lender, return held balance to lender account
+if borrower, return collateral from held collateral to borrower portfolio.
+
+
+
+
+

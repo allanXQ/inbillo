@@ -1,0 +1,88 @@
+/login POST
+{
+  "username":"allan100",
+  "passwd": "string"
+}
+
+/register POST
+{
+  "username":"allan",
+  "firstname": "string",
+  "lastname": "string",
+  "email": "allan@allan.com",
+  "phone": "0798765432",
+  "passwd": "string"
+}
+
+/borrow POST
+{
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+    "list_id":"325ac0f2-00b4-4a04-be2b-8d41f76c4d44",
+    "username":"allan100",
+    "lender":"allan",
+    "amount":10,
+    "interest":2,
+    "collateral":"bitcoin",
+    "collateral_value":10,
+    "payment_period":5,
+    "fund_id":"a1b1efca-6bb2-42bc-9217-6be69fc9bc6c"
+}
+
+/lend POST
+{
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+    "list_id":"21af3f36-bece-4035-ba39-cd18d81e540b",
+    "username":"allan",
+    "borrower":"allan100",
+    "amount":10,
+    "interest":2,
+    "collateral":"bitcoin",
+    "collateral_value":10,
+    "payment_period":5,
+    "coll_id":"ba1c3066-ab18-4b7f-8a0a-0b1d12d33e1f"
+}
+
+/createlisting POST
+{
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+    "party":"borrower", 
+    "username":"allan100", 
+    "amount":10, 
+    "interest":2,
+    "collateral":"bitcoin", 
+    "collateral_value":10, 
+    "payment_period":5
+}
+
+/pay
+{
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+  "username":"allan100",
+  "coll_id":"ba1c3066-ab18-4b7f-8a0a-0b1d12d33e1f",
+  "loan_id":"5f523d73-fe73-4a53-a5a5-c035fe047dd2"
+}
+
+/loans_taken GET
+{
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+    "username":"allan"
+}
+
+/loans_given GET
+{
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+    "username":"allan"
+}
+
+/lenders GET
+{
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+}
+
+/borrowers GET
+{
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsbGFuMTAwIiwiaWF0IjoxNjY2MjM0Mjk2fQ.Jsf1OJlEXXyW2sFBKe19RQQD9Hbh_vxRiTjNEstbDX4",
+}
+
+
+
